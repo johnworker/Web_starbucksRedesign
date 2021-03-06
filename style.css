@@ -16,7 +16,7 @@ nav {
     /* bs */
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     padding: 20px 30px;
-    /* ai 格線用的垂直對其 */
+    /* ai 格線用的垂直對齊 */
     align-items: center;
 }
 
@@ -30,4 +30,80 @@ nav {
     padding: 0 30px;
     /* td 文字裝飾 none 無 */
     text-decoration: none;
+    font-weight: 900;
+    color: #999;
+    transition: 0.5s;
+    border: 0;
+}
+
+#link a:hover {
+    color: #226641;
+    border: 5px #226641;
+}
+
+/* 商品類型 */
+/* 元素 1 > 元素 2 */
+/* 元素 1 裡面 第一層 的 元素 2 */
+#products {
+    /* 整區縮小 置中對齊 */
+    width: 1080px;
+    margin: 0 auto;
+}
+
+#products > div {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+#products .pic img {
+    width: 100%;
+    /* 調整圖片 高度 且 不失去原本比例 */
+    height: 350px;
+    object-fit: cover;
+    object-position: 0 -350px;
+}
+
+/* 文字區域設定 */
+#products .text {
+    padding: 100px 30px 60px 30px;
+}
+
+#products .text h1 {
+    padding: 30px 0;
+}
+
+#products .text p {
+    width: 300px;
+    line-height: 2;
+    padding: 10px 0;
+}
+/* div:nth-child 在同階層的div裡面抓取第2個div */
+/* (odd)抓單數項目 (even)抓雙數項目 */
+#products > div:nth-child(2) {
+    grid-template-areas: "pic text";
+    grid-template-columns: 60% 40%;
+}
+
+#products > div:nth-child(2) .text {
+    /* 格線區域：此區域名稱 */
+    grid-area: text;
+}
+#products > div:nth-child(2) .pic {
+    /* 格線區域：此區域名稱 */
+    grid-area: pic;
+}
+
+/* 按鈕樣式 */
+.button {
+    padding: 8px 10px;
+    /* 邊框：粗細 樣式 顏色 */
+    border: 1px solid #226641;
+    text-decoration: none;
+    color: #226641;
+    transition: 0.5s;
+}
+
+.button:hover {
+    background: #226641;
+    color: #fff;
 }
