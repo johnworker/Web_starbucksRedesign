@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <title>星巴克 | starbucks</title>
+    <!-- AOS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./style.css">
+    <!-- Slick CDN -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <!-- 導覽列 -->
     <!-- nav 導覽列元素 -->
@@ -26,7 +34,21 @@
 
     <!-- 最新商品 -->
     <div id="banner">
-        施工中...
+        <div>
+            <h1>懷舊門市</h1>
+            <hr>
+            <p>復古建築重新裝潢的懷舊門市，等待您來訪。</p>
+        </div>
+        <div>
+            <h1>經典咖啡</h1>
+            <hr>
+            <p>寒流來襲的天氣，最適合來杯熱騰騰的咖啡。</p>
+        </div>
+        <div>
+            <h1>限量星巴克杯</h1>
+            <hr>
+            <p>適合隨身攜帶的精美限量星巴克杯，數量有限唷。</p>
+        </div>
     </div>
     <!-- 商品類型 -->
     <!-- section 文章元素 -->
@@ -39,7 +61,7 @@
                 <p>令人驚豔的精選咖啡風味與各式手調飲品，期待你親自來探索與享受。</p>
                 <a href="" class="button">MORE</a>
             </div>
-            <div class="pic">
+            <div class="pic" data-aos="fade" data-aos-duration="1000">
                 <img src="./img/product1.jpg" alt="飲料">
             </div>
         </div>
@@ -50,7 +72,7 @@
                 <p>高品質食材製成豐富的蛋糕和三明治，每一口都能品嘗到食物的原味，回味無窮。</p>
                 <a href="" class="button">MORE</a>
             </div>
-            <div class="pic">
+            <div class="pic" data-aos="fade" data-aos-duration="1000">
                 <img src="./img/product2.jpg" alt="糕點">
             </div>
         </div>
@@ -61,7 +83,7 @@
                 <p>挑選最適合你的咖啡用品與設備，與好友家人一起共創居家迷人咖啡時光。</p>
                 <a href="" class="button">MORE</a>
             </div>
-            <div class="pic">
+            <div class="pic" data-aos="fade" data-aos-duration="1000">
                 <img src="./img/product3.jpg" alt="周邊">
             </div>
         </div>
@@ -73,9 +95,9 @@
                 <img src="./img/info1.jpg" alt="">
             </div>
             <div class="text">
-                <h1>標題</h1>
+                <h1>懷舊門市</h1>
                 <hr>
-                <p>段落</p>
+                <p>復古建築重新裝潢的懷舊門市，等待您來訪。</p>
                 <a href="" class="button">MORE</a>
             </div>
         </div>
@@ -84,24 +106,51 @@
                 <img src="./img/info2.jpg" alt="">
             </div>
             <div class="text">
-                <h1>標題</h1>
+                <h1>經典咖啡</h1>
                 <hr>
-                <p>段落</p>
-                <a href="" class="button">MORE</a></div>
+                <p>寒流來襲的天氣，最適合來杯熱騰騰的咖啡。</p>
+                <a href="" class="button">MORE</a>
+            </div>
         </div>
         <div>
             <div class="pic">
                 <img src="./img/info3.jpg" alt="">
             </div>
             <div class="text">
-                <h1>標題</h1>
+                <h1>限量星巴克杯</h1>
                 <hr>
-                <p>段落</p>
-                <a href="" class="button">MORE</a></div>
+                <p>適合隨身攜帶的精美限量星巴克杯，數量有限唷。</p>
+                <a href="" class="button">MORE</a>
+            </div>
         </div>
     </section>
     <!-- 其他服務 -->
-
+    <div id="service">
+        <div class="service1">
+            <img src="./img/service1.jpg" alt="">
+            <h2>小標題</h2>
+        </div>
+        <div class="service2">
+            <img src="./img/service2.jpg" alt="">
+            <h2>小標題</h2>
+        </div>
+        <div class="service3">
+            <img src="./img/service3.jpg" alt="">
+            <h2>小標題</h2>
+        </div>
+        <div class="service4">
+            <img src="./img/service4.jpg" alt="">
+            <h2>小標題</h2>
+        </div>
+        <div class="service5">
+            <img src="./img/service5.jpg" alt="">
+            <h2>小標題</h2>
+        </div>
+        <div class="service6">
+            <img src="./img/service6.jpg" alt="">
+            <h2>小標題</h2>
+        </div>
+    </div>
     <!-- 頁尾 -->
     <footer>
         <div id="footer-social">
@@ -117,6 +166,18 @@
         <div id="contact">客服專線 0800-000-482 (服務時間: 週一至週六 09:00-18:00，週日與國定假日除外)</div>
         <div>&copy; 2021 Starbucks Company </div>
     </footer>
-    
+
+    <!-- AOS CDN -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Slick CDN -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- 連接自己的 JS -->
+    <script src="./main.js"></script>
 </body>
+
 </html>

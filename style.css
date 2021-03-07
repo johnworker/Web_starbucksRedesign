@@ -18,6 +18,14 @@ nav {
     padding: 20px 30px;
     /* ai 格線用的垂直對齊 */
     align-items: center;
+    /* 定位：固定式　- 寬度會不見 */
+    position: fixed;
+    /* 上方的位置 */
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    /* 透明度：0 - 1 */
+    opacity: 0.9;
 }
 
 /* 元素1 元素2 */
@@ -41,12 +49,71 @@ nav {
     border: 5px #226641;
 }
 
+/* 最新商品 */
+/* 元素1 元素2 - 在元素1 內 所有的 元素 2 */
+#banner div {
+    /* 高度：100 vh 螢幕高度 */
+    height: 100vh;
+}
+#banner div:nth-child(1) {
+    background-image: url(./img/banner1.jpg);
+    background-size: cover;
+}
+
+#banner div:nth-child(2) {
+    background-image: url(./img/banner2.jpg);
+}
+
+#banner div:nth-child(3) {
+    background-image: url(./img/banner3.jpg);
+}
+
+#banner {
+    text-align: center;
+    color: #fff;
+}
+
+#banner h1 {
+    padding: 30px;
+    margin-top: 100px;
+    font-size: 120px;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+#banner p {
+    padding: 30px;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+#banner hr {
+    width: 80%;
+    margin: 0 auto;
+    height: 5px;
+    background: #fff;
+    border: none;
+}
+
+#banner .slick-prev {
+    left: 50px;
+    z-index: 2;
+    transform: scale(1.5);
+}
+
+#banner .slick-next {
+    right: 50px;
+    z-index: 2;
+    transform: scale(1.5);
+}
+
+#banner .slick-dots {
+    bottom: 25px;
+}
 /* 商品類型 */
 /* 元素 1 > 元素 2 */
 /* 元素 1 裡面 第一層 的 元素 2 */
 #products {
     /* 整區縮小 置中對齊 */
-    width: 1080px;
+    width: 1280px;
     margin: 0 auto;
 }
 
@@ -135,7 +202,41 @@ nav {
 #info .text p{
     padding: 20px 0;
 }
+/* 其他服務 */
+#service {
+    width: 1280px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+/* focus 聚焦：選取此元素時 */
+#service div:focus {
+    /* 選取邊框：無 */
+    outline: none;
+}
 
+#service img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    /* border-radius: 50%; 寬高要相同(圓形) */
+    border-radius: 50%;
+    display: block;
+    /* 顯示模式：區塊 */
+    margin: 0 auto;
+    /* 區塊元素 block 才能margin:0 auto; */
+    transition: 0.5s;
+}
+
+#service img:hover {
+    border-radius: 5px;
+}
+
+#service　h2 {
+    text-align: center;
+    margin-top: 10px;
+    color: #aaa;
+    
+}
 /* 頁尾 */
 footer {
     background: #f6f6f6;
